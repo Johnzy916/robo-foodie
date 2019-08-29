@@ -57,7 +57,9 @@ public/dist/
 
 
 ### Setup Heroku
-[Install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli "Heroku's DevCenter")
+[Create a Heroku account](https://www.heroku.com/ "Heroku").
+
+[Install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli "Heroku's DevCenter").
 #### Login to Heroku
 ```bash
 heroku login
