@@ -1,5 +1,5 @@
 # react-boilerplate
-A boilerplate with Webpack, Babel, React, Router, Redux, Jest, Enzyme, Heroku and Firebase
+A boilerplate with Webpack, Babel, React, Router, Redux, Jest, Enzyme, Heroku and Firebase integration.
 
 
 
@@ -33,6 +33,8 @@ npm install
 
 
 ### Setup Firebase
+[Create a Firebase project for development and testing](https://console.firebase.google.com "Google Firebase Console").
+
 Fill in the **.env.test** and **.env.development** files with information from your `firebaseConfig`.
 ```
 FIREBASE_API_KEY=
