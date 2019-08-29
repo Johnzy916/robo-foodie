@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+::selection {
+  background-color: rgba(lighten($color-secondary, 10%), .5);
+  color: rgba(darken($color-secondary, 10%), .8);
+}
+
+body {
+  color: $dark-gray;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $font-size-md;
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.is-active {
+  font-weight: bold;
+}
