@@ -66,6 +66,7 @@ heroku login
 ```
 
 #### Create a named app
+This will also create a remote named 'Heroku'
 ```bash
 heroku create your-app-name
 ```
