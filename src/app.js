@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { auth } from './firebase/firebase';
-import { login, logout } from './actions/auth';
+import { login, setUserName, logout } from './actions/auth';
 import LoadingPage from './components/LoadingPage';
 import 'normalize.css';
 import './styles/styles.scss';
@@ -40,6 +40,7 @@ auth.onAuthStateChanged((user) => {
   if (user) {
     
     store.dispatch(login(user.uid));
+    store.dispatch(setUserName(user.displayName));
     
     // get stuff from database before rendering
     // store.dispatch(startGetData())
