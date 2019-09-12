@@ -1,0 +1,33 @@
+// Widget
+
+.widget {
+  background: $color-tertiary-light;
+  margin-bottom: $xl-size;
+}
+
+// Widget header
+
+.widget-header {
+  background: $color-tertiary-lighter;
+  border-bottom: .3rem solid $color-tertiary-light;
+  color: $off-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $m-size;
+}
+
+.widget-header__title {
+  margin: 0;
+}
+
+// Widget message
+
+.widget__message {
+  border-bottom: .1rem solid $color-tertiary-lighter;
+  color: $off-white;
+  font-size: $m-size;
+  margin: 0;
+  padding: $l-size;
+  text-align: center;
+}

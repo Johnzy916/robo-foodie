@@ -1,0 +1,37 @@
+// Add option error
+
+.add-place-error {
+  color: $off-white;
+  font-style: italic;
+  margin: $m-size 0 0 0;
+  padding: 0 $m-size;
+}
+
+// Add option
+
+.add-place {
+  display: flex;
+  flex-direction: column;
+  padding: $m-size;
+
+  @include media(tablet) {
+    flex-direction: row;
+  }
+}
+
+// Add option input
+
+.add-place__input {
+  background: $color-tertiary-lighter;
+  border: none;
+  border-bottom: .3rem solid $color-tertiary;
+  color: $off-white;
+  flex-grow: 1;
+  margin: 0 0 $s-size 0;
+  outline: none;
+  padding: $s-size;
+
+  @include media(tablet) {
+    margin: 0 $s-size 0 0;
+  }
+}

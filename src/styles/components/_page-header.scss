@@ -1,5 +1,5 @@
 .page-header {
-    background: $off-white;
+    background: $color-tertiary-light;
     margin-bottom: $l-size;
     padding: $l-size 0;
 }
@@ -8,22 +8,87 @@
     margin-top: $m-size;
 }
 
-.page-header__title {
+.page-header__content {
     margin: 0;
     font-weight: 300;
+    position: relative;
     
-    span {
-        font-weight: 700;
+    @include media(phone-small) {
+        font-size: $font-size-lg;
     }
 }
 
-.page-header__subtitle {
-    margin: 0;
-    font-weight: 300;
-    font-style: italic;
-    color: lighten($gray, 20%);
+.addon {
+    background: $off-white;
+    border-radius: 2rem;
+    box-shadow: 0 0 6px rgba($color-tertiary, .3);
+    color: $color-tertiary-lighter;
+    position: absolute;
+    width: 50%;
+    padding: 0 $s-size;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    
+    @include media(phone) {
+        width: 100%;
+        top: 100%;
+        left: 0;
+        transform: translateY(2rem);
+    }
+    
+    &__title {
+        color: $color-secondary;
+        
+        @include media(phone-small) {
+            font-size: $font-size-md;
+        }
+    }
+    
+    &::before {
+        content: '';
+        background: $off-white;
+        box-shadow: -5px 5px 5px 0 rgba($color-tertiary, .3);
+        width: 4rem;
+        height: 4rem;
+        top: 50%;
+        left: -2rem;
+        position: absolute;
+        transform: translate(0, -50%) rotate(45deg);
+        z-index: -1;
+        
+        @include media(phone) {
+            top: -2rem;
+            left: 50%;
+            transform: translate(-50%, 0) rotate(45deg);
+            box-shadow: -5px -5px 5px 0 rgba($color-tertiary, .3);
+        }
+    }
 }
 
-.page-header__subtitle-number {
-    font-weight: 700;
+.addon__close-btn {
+    color: $color-tertiary-lighter;
+    font-size: $font-size-xl;
+    background: none;
+    outline: none;
+    border: none;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.1rem;
+    line-height: .5;
+    box-shadow: none;
+    
+    @include media(phone-small) {
+        color: $color-tertiary-lighter;
+        font-size: $font-size-xxl;
+        top: -5rem;
+        background: $off-white;
+        border-radius: 50%;
+        box-shadow: -5px -5px 5px 0 rgba($color-tertiary, .3);
+    }
 }
+

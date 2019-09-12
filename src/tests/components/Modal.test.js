@@ -31,8 +31,3 @@ test('should handle cancel button', () => {
   wrapper.find('button').at(0).simulate('click');
   expect(cancelModal).toHaveBeenCalled();
 });
-
-test('should handle confirm button', () => {
-  wrapper.find('button').at(1).simulate('click');
-  expect(confirmModal).toHaveBeenCalled();
-});

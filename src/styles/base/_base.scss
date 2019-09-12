@@ -10,12 +10,13 @@ html {
 
 ::selection {
   background-color: rgba(lighten($color-primary, 10%), .5);
-  color: rgba(darken($color-primary, 10%), .8);
+  color: $off-white;
 }
 
 body {
-  color: $dark-gray;
-  font-family: Helvetica, Arial, sans-serif;
+  background: $color-tertiary;
+  color: $white;
+  font-family: 'Montserrat', sans-serif;
   font-size: $font-size-md;
   line-height: 1.6;
 }

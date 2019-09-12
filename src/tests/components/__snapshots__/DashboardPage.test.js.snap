@@ -1,9 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render the dashboard correctly 1`] = `
-<div
-  className="content-container"
->
-  This is where the dashboard goes
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <div
+        className="page-header__content"
+      >
+        <Connect(ChoosePlace) />
+      </div>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <div
+      className="widget"
+    >
+      <Connect(Options) />
+      <Connect(AddOption) />
+    </div>
+  </div>
 </div>
 `;

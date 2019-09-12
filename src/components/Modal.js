@@ -22,25 +22,23 @@ export const Modal = ({ modalVisible, modalProps, modalType, cancelModal, confir
             {modalProps.subtitle}
         </p>
         }
-        <button
-            className="btn btn--tertiary btn--shine react-modal__btn"
-            onClick={() => {
-                    cancelModal();
-                    if (modalProps.cancelAuth) { 
-                        modalProps.cancelAuth('User chose not to connect accounts');
-                    };
+        { modalProps.cancelText &&
+            <button
+                className="btn btn--tertiary btn--shine react-modal__btn"
+                onClick={() => {
+                        cancelModal();
+                        if (modalProps.cancelAuth) { 
+                            modalProps.cancelAuth('User chose not to connect accounts');
+                        };
+                    }
                 }
-            }
-        >
-            {modalProps.cancelText}
-        </button>
+            >
+                {modalProps.cancelText}
+            </button>
+        }
         <button 
             className="btn btn--primary btn--shine react-modal__btn"
-            onClick={() => {
-                    confirmModal(modalProps.confirmType, modalProps.id);
-                    if (modalProps.confirmAuth) { modalProps.confirmAuth() };
-                }
-            }
+            onClick={cancelModal}
         >
             {modalProps.confirmText}
         </button>

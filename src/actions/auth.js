@@ -5,6 +5,7 @@ import {
     facebookAuthProvider
 } from '../firebase/firebase';
 import oauthLogin from '../firebase/oauthLogin';
+import database from '../firebase/firebase.js';
 import { showModal } from './modal';
 
 export const login = (uid) => ({
@@ -63,6 +64,37 @@ export const startLogin = (type) => {
         }
     };
 };
+
+export const isFirstTimeUser = (bool) => ({
+    type: 'IS_FIRST_TIME_USER',
+    bool
+});
+
+export const checkFirstTimeUser = () => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/isFirstTimeUser`).once('value')
+            .then(snapshot => {
+                if (!snapshot.exists()) {
+                    dispatch(setFirstTimeUser(true));
+                } else {
+                    dispatch(setFirstTimeUser(false));
+                }
+            })
+    }
+}
+
+export const setFirstTimeUser = (bool) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        if (bool === false) {
+            dispatch(isFirstTimeUser(false));
+        } else {
+            return database.ref(`users/${uid}/isFirstTimeUser`).set(false)
+                .then(dispatch(isFirstTimeUser(true)));
+        }
+    }
+}
 
 export const logout = () => ({
     type: 'LOGOUT'

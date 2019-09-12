@@ -10,6 +10,11 @@ export default (state = {}, action) => {
               ...state,
               userName: action.userName
             };
+        case 'IS_FIRST_TIME_USER':
+            return {
+                ...state,
+                isFirstTimeUser: action.bool
+            }
         case 'LOGOUT':
             return {};
         default:

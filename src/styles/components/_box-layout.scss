@@ -23,7 +23,7 @@
     display: flex;
     justify-content: center;
     flex-flow: column;
-    background: fade-out(white, .15);
+    background: fade-out($white, .15);
     border-radius: .3rem;
     padding: $l-size $m-size;
     text-align: center;
@@ -32,6 +32,7 @@
 }
 
 .box-layout__title {
+    color: $color-tertiary-light;
     margin: 0 0 $m-size 0;
     line-height: 1;
 }
@@ -43,6 +44,10 @@
     font-weight: 300;
     color: gray;
     line-height: 1.4;
+}
+
+.box-layout__sub-tagline {
+    color: $color-tertiary-light;
 }
 
 .box-layout__button {
