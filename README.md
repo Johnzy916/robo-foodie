@@ -1,5 +1,5 @@
 # Robo-Foodie
-Take the back-and-forth out of what you're eating today!
+Take the back-and-forth out of what you're eating!
 
 
 
