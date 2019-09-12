@@ -30,6 +30,10 @@
   margin: 0 0 $s-size 0;
   outline: none;
   padding: $s-size;
+  
+  &::placeholder {
+    color: $color-tertiary-light;
+  }
 
   @include media(tablet) {
     margin: 0 $s-size 0 0;

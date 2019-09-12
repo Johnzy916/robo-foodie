@@ -36,8 +36,13 @@ export class AddOption extends Component {
           className="add-place"
           onSubmit={this.handleAddPlace}
         >
-          <input className="add-place__input" type="text" name="place" />
-          <button className="btn btn--primary btn--shine">Add Place</button>
+          <input 
+            className="add-place__input" 
+            type="text" 
+            name="place" 
+            placeholder="Restaurant, meal, ingredient..."
+          />
+          <button className="btn btn--primary btn--shine">Add Option</button>
         </form>
       </div>
     );
