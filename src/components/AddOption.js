@@ -13,9 +13,9 @@ export class AddOption extends Component {
     const place = e.target.elements.place.value.trim();
     let error;
         if (!place) {
-            error = 'Please enter place to eat';
+            error = 'Please enter something you\'d like to eat';
         } else if (this.props.places.map(value => value.place).indexOf(place) > -1) {
-            error = 'This option already exists';
+            error = 'This option already exists!';
             e.target.elements.place.value = "";
         }
         this.setState(() => ({ error }));
